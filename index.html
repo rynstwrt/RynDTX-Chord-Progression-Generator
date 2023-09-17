@@ -6,18 +6,19 @@
     <meta name="author" content="Ryan Stewart">
     <meta name="description" content="A chord progression generator created by RynDTX.">
     <meta name="keywords" content="chord, progression, chord progression, chord progression generator, chord generator, generator, RynDTX">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>RynDTX Chord Progression Generator</title>
 
     <!--  STYLESHEETS  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Lato:wght@700&family=Montserrat:wght@200;300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="main.css">
 
     <!--  SCRIPTS  -->
     <script src="./js/nav-links.js" defer></script>
     <script src="./js/range-outputs.js" defer></script>
+    <script src="./js/selects.js" defer></script>
 </head>
 <body>
     <!--  GENERATOR SECTION  -->
@@ -34,10 +35,11 @@
             </nav>
         </header>
 
-        <div id="display-container">
-            <div id="display">
-                <h2>A B C Dm A B C Dm</h2>
-            </div>
+<!--        <div id="header-padding"></div>-->
+
+        <div id="display">
+<!--                <h2>A B C Dm A B C Dm</h2>-->
+            <h2>A B C Dm</h2>
         </div>
 
         <div id="options">
@@ -54,6 +56,15 @@
                     <option value="random">Random</option>
                 </select>
             </div>
+
+            <div class="option">
+                <label for="major-minor-input">Major/Minor:</label>
+                <select id="major-minor-input">
+                    <option id="random">Random</option>
+                    <option id="major">Major</option>
+                    <option id="minor">Minor</option>
+                </select>
+            </div>
         </div>
 
         <div id="buttons">
@@ -65,7 +76,8 @@
 
     <!--  ABOUT SECTION  -->
     <section id="about">
-
+        <h3>About</h3>
+        <p>Hi! I'm RynDTX. I'm a DJ and producer from Dallas, Texas.</p>
     </section>
 </body>
 </html>
