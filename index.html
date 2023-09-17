@@ -17,8 +17,10 @@
 
     <!--  SCRIPTS  -->
     <script src="./js/nav-links.js" defer></script>
+    <script src="./js/range-outputs.js" defer></script>
 </head>
 <body>
+    <!--  GENERATOR SECTION  -->
     <section id="generator">
         <header>
             <div id="header-name">
@@ -31,7 +33,37 @@
                 </ul>
             </nav>
         </header>
+
+        <div id="display-container">
+            <div id="display">
+                <h2>A B C Dm A B C Dm</h2>
+            </div>
+        </div>
+
+        <div id="options">
+            <div class="option">
+                <label for="num-chords-input">Number of chords:</label>
+
+                <input id="num-chords-input" type="range" min="2" max="8" step="1" value="4">
+                <output id="num-chords-output">4</output>
+            </div>
+
+            <div class="option">
+                <label for="key-input">Key:</label>
+                <select id="key-input">
+                    <option value="random">Random</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="buttons">
+            <button id="generate-button">Generate</button>
+            <button id="preview-button">Preview</button>
+        </div>
     </section>
+
+
+    <!--  ABOUT SECTION  -->
     <section id="about">
 
     </section>

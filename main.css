@@ -26,6 +26,9 @@ section {
   padding: 15px 20px;
 }
 
+section#generator {
+  margin-top: 120px;
+}
 section#generator header {
   display: flex;
   justify-content: space-between;
@@ -59,21 +62,62 @@ section#generator header nav ul {
   align-items: flex-end;
   list-style: none;
 }
-section#generator header nav ul li {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 14px;
+section#generator header nav ul li:not(section#generator header nav ul li:first-of-type) {
+  margin-top: 8px;
 }
 section#generator header nav ul li a {
   transition: text-decoration-color 0.2s ease-in-out;
   text-decoration: #131313 solid underline;
   text-underline-offset: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
 }
 section#generator header nav ul li a.active {
   text-decoration: #fc6f03 solid underline;
 }
-section#generator header nav ul li:not(section#generator header nav ul li:first-of-type) {
-  margin-top: 9px;
+section#generator #display-container {
+  height: 300px;
+  background-color: #2d2d2d;
+  padding: 50px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+section#generator #display-container #display {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#generator #display-container #display h2 {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 50px;
+  word-spacing: 10px;
+  line-height: 4.5rem;
+}
+section#generator #options {
+  margin-top: 50px;
+}
+section#generator #options .option:not(section#generator #options .option:last-of-type) {
+  margin-bottom: 20px;
+}
+section#generator #options .option label {
+  font-size: 20px;
+  margin-right: 10px;
+}
+section#generator #options .option input[type=range] {
+  max-width: 130px;
+}
+section#generator #options .option output {
+  font-family: inherit;
+  font-size: 17px;
+}
+section#generator #buttons {
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */
