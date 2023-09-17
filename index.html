@@ -12,13 +12,14 @@
     <!--  STYLESHEETS  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Lato:wght@700&family=Montserrat:wght@200;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Lato:wght@700&family=Montserrat:wght@100;200;300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="main.css">
 
     <!--  SCRIPTS  -->
     <script src="./js/nav-links.js" defer></script>
     <script src="./js/range-outputs.js" defer></script>
-    <script src="./js/selects.js" defer></script>
+    <script src="./js/Tone.js"></script>
+    <script src="./js/audio-handler.js" defer></script>
 </head>
 <body>
     <!--  GENERATOR SECTION  -->
@@ -35,11 +36,22 @@
             </nav>
         </header>
 
-<!--        <div id="header-padding"></div>-->
-
         <div id="display">
 <!--                <h2>A B C Dm A B C Dm</h2>-->
             <h2>A B C Dm</h2>
+        </div>
+
+        <div id="gameboy-buttons">
+            <div>
+                <div class="gameboy-button">
+                    <p>B</p>
+                </div>
+            </div>
+            <div>
+                <div class="gameboy-button">
+                    <p>A</p>
+                </div>
+            </div>
         </div>
 
         <div id="options">
@@ -60,16 +72,36 @@
             <div class="option">
                 <label for="major-minor-input">Major/Minor:</label>
                 <select id="major-minor-input">
-                    <option id="random">Random</option>
-                    <option id="major">Major</option>
-                    <option id="minor">Minor</option>
+                    <option value="random">Random</option>
+                    <option value="major">Major</option>
+                    <option value="minor">Minor</option>
+                </select>
+            </div>
+
+            <div class="option">
+                <label for="synth-input">Preview Synth:</label>
+                <select id="synth-input">
+                    <option value="PolySynth">Poly Synth</option>
+                    <option value="FMSynth">FM Synth</option>
+                    <option value="AMSynth">AM Synth</option>
+                    <option value="NoiseSynth">Noise Synth</option>
+                </select>
+            </div>
+
+            <div class="option">
+                <label for="oscillator-input">Preview Synth:</label>
+                <select id="oscillator-input">
+                    <option value="sine">Sine</option>
+                    <option value="square">Square</option>
+                    <option value="sawtooth">Sawtooth</option>
+                    <option value="fatsawtooth">Fat Sawtooth</option>
                 </select>
             </div>
         </div>
 
         <div id="buttons">
             <button id="generate-button">Generate</button>
-            <button id="preview-button">Preview</button>
+            <button id="play-button">Play</button>
         </div>
     </section>
 
@@ -77,7 +109,22 @@
     <!--  ABOUT SECTION  -->
     <section id="about">
         <h3>About</h3>
-        <p>Hi! I'm RynDTX. I'm a DJ and producer from Dallas, Texas.</p>
+        <p>Hi! I'm Ryn. I'm a DJ and producer from Dallas, Texas.</p>
+        <p>This website was created using Tone.JS</p>
+        <p>You can find my links below:</p>
+        <div id="links">
+            <ul>
+                <li><a href="#">My Website</a></li>
+                <li><a href="#">SoundCloud</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">MixCloud</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitch</a></li>
+            </ul>
+            <ul>
+            </ul>
+        </div>
     </section>
 </body>
 </html>
