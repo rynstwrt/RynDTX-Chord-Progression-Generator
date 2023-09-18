@@ -39,7 +39,7 @@ p {
 }
 
 select {
-  min-width: 200px;
+  min-width: 100px;
   appearance: none;
   -webkit-appearance: none;
   font-size: 15px;
@@ -112,16 +112,36 @@ section#generator #gameboy-buttons {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  margin-top: 20px;
 }
-section#generator #gameboy-buttons > div {
+section#generator #gameboy-buttons .gameboy-button {
   border: 1px solid #fc6f03;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
+}
+section#generator #gameboy-buttons .gameboy-button:after {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: #fc6f03;
+}
+section#generator #gameboy-buttons .gameboy-button:first-of-type {
+  margin-right: 20px;
+  margin-top: 20px;
+}
+section#generator #gameboy-buttons .gameboy-button:first-of-type:after {
+  content: "A";
+}
+section#generator #gameboy-buttons .gameboy-button:last-of-type {
+  margin-right: 100px;
+}
+section#generator #gameboy-buttons .gameboy-button:last-of-type:after {
+  content: "B";
 }
 section#generator #display {
   width: 100%;
@@ -141,30 +161,39 @@ section#generator #display h2 {
   color: #dfdfdf;
 }
 section#generator #options {
-  margin-top: 60px;
+  margin-top: 20px;
 }
 section#generator #options .option {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  background-color: #1C1C1C;
+  color: black;
+  padding: 20px 20px;
+  border-radius: 5px;
 }
 section#generator #options .option:not(section#generator #options .option:last-of-type) {
   margin-bottom: 15px;
 }
 section#generator #options .option label {
   font-size: 19px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   margin-right: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
   color: #dfdfdf;
-  font-weight: 200;
 }
 section#generator #options .option input[type=range] {
   max-width: 130px;
 }
 section#generator #options .option output {
-  font-family: inherit;
-  font-size: 17px;
+  font-size: 21px;
+  letter-spacing: 1px;
+  margin-right: 10px;
+  font-family: "Montserrat", sans-serif;
+  color: #dfdfdf;
+  margin-left: 10px;
 }
 section#generator #buttons {
   margin-top: 30px;

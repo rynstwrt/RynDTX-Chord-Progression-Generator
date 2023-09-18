@@ -3,6 +3,7 @@ $color-2: #FFFFFF;
 $color-3: #fc6f03;
 $color-4: lighten($color-1, 80%);
 $color-5: darken(saturate($color-3, 90%), 10%);
+$color-6: #1C1C1C;
 
 $font-1: "Inclusive Sans", sans-serif;
 $font-1-w1: 400;
@@ -55,16 +56,14 @@ h3
 p
 {
     font-family: $font-3;
-    //font-weight: $font-3-w1;
     font-weight: 100;
     font-size: 20px;
-    //letter-spacing: 1px;
     margin-top: 15px;
 }
 
 select
 {
-    min-width: 200px;
+    min-width: 100px;
     appearance: none;
     -webkit-appearance: none;
     font-size: 15px;
@@ -163,15 +162,16 @@ section#generator
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        margin-top: 20px;
 
-        & > div
+        .gameboy-button
         {
             //width: 100%;
 
             border: 1px solid $color-3;
             border-radius: 50%;
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
 
             display: flex;
             justify-content: center;
@@ -179,9 +179,34 @@ section#generator
 
             padding: 20px;
 
-            .gameboy-button
+            &:after
             {
+                font-family: $font-3;
+                font-weight: $font-3-w2;
+                font-size: 20px;
+                color: $color-3;
+            }
 
+            &:first-of-type
+            {
+                margin-right: 20px;
+                margin-top: 20px;
+
+                &:after
+                {
+                    content: "A";
+                }
+            }
+
+            &:last-of-type
+            {
+                //margin-top: 5px;
+                margin-right: 100px;
+
+                &:after
+                {
+                    content: "B";
+                }
             }
         }
     }
@@ -209,14 +234,18 @@ section#generator
 
     #options
     {
-        margin-top: 60px;
+        margin-top: 20px;
 
         .option
         {
             width: 100%;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-between;
             align-items: center;
+            background-color: $color-6;
+            color: black;
+            padding: 20px 20px;
+            border-radius: 5px;
 
             &:not(&:last-of-type)
             {
@@ -226,10 +255,12 @@ section#generator
             label
             {
                 font-size: 19px;
-                letter-spacing: 1px;
+                letter-spacing: 2px;
                 margin-right: 10px;
+                font-family: $font-3;
+                font-weight: $font-3-w2;
                 color: $color-4;
-                font-weight: $font-3-w1;
+                //font-weight: $font-3-w2;
             }
 
             input[type="range"]
@@ -239,8 +270,14 @@ section#generator
 
             output
             {
-                font-family: inherit;
-                font-size: 17px;
+                //font-family: inh/**/erit;
+                //font-size: 17px;
+                font-size: 21px;
+                letter-spacing: 1px;
+                margin-right: 10px;
+                font-family: $font-3;
+                color: $color-4;
+                margin-left: 10px;
             }
         }
     }

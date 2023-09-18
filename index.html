@@ -16,9 +16,9 @@
     <link rel="stylesheet" type="text/css" href="main.css">
 
     <!--  SCRIPTS  -->
-    <script src="./js/nav-links.js" defer></script>
-    <script src="./js/range-outputs.js" defer></script>
-    <script src="./js/Tone.js"></script>
+    <script src="js/ui/nav-links.js" defer></script>
+    <script src="js/ui/range-outputs.js" defer></script>
+    <script src="js/libraries/Tone.js"></script>
     <script src="./js/audio-handler.js" defer></script>
 </head>
 <body>
@@ -41,17 +41,10 @@
             <h2>A B C Dm</h2>
         </div>
 
-        <div id="gameboy-buttons">
-            <div>
                 <div class="gameboy-button">
-                    <p>B</p>
-                </div>
-            </div>
-            <div>
-                <div class="gameboy-button">
-                    <p>A</p>
-                </div>
-            </div>
+        <div id="buttons">
+            <button id="play-button">Play</button>
+            <button id="generate-button">Generate</button>
         </div>
 
         <div id="options">
@@ -97,11 +90,6 @@
                     <option value="fatsawtooth">Fat Sawtooth</option>
                 </select>
             </div>
-        </div>
-
-        <div id="buttons">
-            <button id="generate-button">Generate</button>
-            <button id="play-button">Play</button>
         </div>
     </section>
 
