@@ -82,7 +82,7 @@ header nav ul li a.active {
 }
 
 #buttons {
-  margin-top: 20px;
+  margin-top: 100px;
   margin-bottom: 75px;
 }
 #buttons .button-row {
@@ -118,6 +118,19 @@ header nav ul li a.active {
 }
 #buttons .button-row:last-child {
   padding-right: 80px;
+}
+
+#generator-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#generator-bottom .start-select-button {
+  width: 65px;
+  height: 14px;
+  background-color: #fc6f03;
+  border-radius: 20px;
+  margin: 20px 10px;
 }
 
 /*# sourceMappingURL=generator-section.css.map */
