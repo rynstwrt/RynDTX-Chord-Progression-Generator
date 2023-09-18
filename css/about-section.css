@@ -1,0 +1,31 @@
+section#about {
+  padding-top: 30px;
+}
+section#about #links {
+  margin-top: 10px;
+}
+section#about #links ul {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+}
+section#about #links ul li a {
+  font-family: "Montserrat", sans-serif;
+  color: #cc5800;
+  text-transform: uppercase;
+  margin-right: 10px;
+  text-decoration: none;
+  letter-spacing: 0;
+}
+section#about #links ul li a:before {
+  content: "[ ";
+}
+section#about #links ul li a:after {
+  content: " ]";
+}
+section#about #links ul li a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=about-section.css.map */

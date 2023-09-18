@@ -1,0 +1,197 @@
+@import "./shared";
+
+section#generator
+{
+    font-family: $font-3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 0;
+    background-color: $color-1;
+    margin-bottom: 20px;
+
+    #header-name
+    {
+        display: flex;
+        flex-direction: column;
+
+        h1
+        {
+            font-family: $font-2;
+            font-size: 40px;
+            letter-spacing: 2px;
+
+            span
+            {
+                display: block;
+                font-family: $font-1;
+                font-size: 15px;
+                max-width: 150px;
+                letter-spacing: 0;
+            }
+        }
+    }
+
+    nav
+    {
+        ul
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            list-style: none;
+
+            li
+            {
+                &:not(&:first-of-type)
+                {
+                    margin-top: 8px;
+                    //margin-left: 8px;
+                }
+
+                a
+                {
+                    transition: text-decoration-color .2s ease-in-out;
+                    text-decoration: $color-1 solid underline;
+                    text-underline-offset: 2px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-size: 14px;
+
+                    &.active
+                    {
+                        text-decoration: $color-3 solid underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#display
+{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $color-3;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .25);
+
+    h2
+    {
+        text-align: center;
+        font-family: $font-2;
+        font-size: 50px;
+        word-spacing: 15px;
+        line-height: 4.5rem;
+        color: $color-4;
+    }
+}
+
+#options
+{
+    .option
+    {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $color-6;
+        color: black;
+        padding: 10px 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+
+        &:not(&:last-of-type)
+        {
+            margin-bottom: 10px;
+        }
+
+        label
+        {
+            font-size: 15px;
+            letter-spacing: 1px;
+            margin-right: 10px;
+            font-family: $font-3;
+            font-weight: $font-3-w2;
+            color: $color-4;
+        }
+
+        input[type="range"]
+        {
+            max-width: 130px;
+        }
+
+        output
+        {
+            font-size: 21px;
+            letter-spacing: 1px;
+            margin-right: 10px;
+            font-family: $font-3;
+            color: $color-4;
+            margin-left: 10px;
+        }
+    }
+}
+
+#buttons
+{
+    margin-top: 20px;
+
+    .button-row
+    {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        label
+        {
+            font-weight: $font-3-w2;
+            color: $color-4;
+            margin-right: 10px;
+        }
+
+        button
+        {
+            color: $color-3;
+            border: 1px solid $color-3;
+            border-radius: 50%;
+            $size: 45px;
+            width: $size;
+            height: $size;
+            background-color: transparent;
+            font-family: $font-2;
+            font-size: 15px;
+            overflow: hidden;
+            transition: background-color .2s ease-in-out, color .2s ease-in-out;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .25);
+
+            &:hover
+            {
+                background-color: $color-3;
+                color: $color-1;
+            }
+        }
+
+        &:first-child
+        {
+            padding-right: 10px;
+        }
+
+        &:last-child
+        {
+            padding-right: 80px;
+        }
+    }
+}

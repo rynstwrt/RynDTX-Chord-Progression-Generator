@@ -1,7 +1,3 @@
-const synthInput = document.querySelector("#synth-input");
-const oscillatorInput = document.querySelector("#oscillator-input");
-const playButton = document.querySelector("#play-button");
-
 const NOTE_DURATION = "16n";
 const NUM_VOICES = 5;
 const SYNTH_INPUT_MAP = {
@@ -16,29 +12,28 @@ const SYNTH_ENVELOPE = {
     // sustain: 0,
     // release: 1
 };
+const DEFAULT_OSCILLATOR = "sine";
+
+const synthInput = document.querySelector("#synth-input");
+const oscillatorInput = document.querySelector("#oscillator-input");
+const playButton = document.querySelector("#play-button");
 
 let toneJSStarted = false;
 let synth;
-let oscillator = "sine";
+let oscillator = DEFAULT_OSCILLATOR;
 let part;
+let currentProgression;
 
 
-async function playProgression(chords)
+async function playProgression()
 {
-    const progression = [];
-    for (let i in chords)
-    {
-        const chord = chords[i];
-        progression.push(["0:" + i, chord]);
-    }
-
     if (part)
         part.clear();
 
     part = new Tone.Part((time, note) =>
     {
         synth.triggerAttackRelease(note, NOTE_DURATION, time);
-    }, progression);
+    }, currentProgression);
 
     part.start(0)
     Tone.Transport.start();
@@ -47,14 +42,13 @@ async function playProgression(chords)
 
 async function setSynth(synthClass)
 {
-    synth = new Tone.PolySynth(synthClass, NUM_VOICES).toMaster();
+    synth = new Tone.PolySynth(synthClass, NUM_VOICES).toDestination();
 
     synth.set({
-        // oscillator: {
-        //     type: oscillator
-        // },
-        // envelope: SYNTH_ENVELOPE,
-        // resonance: 0.9
+        oscillator: {
+            type: oscillator
+        },
+        envelope: SYNTH_ENVELOPE
     });
 }
 
@@ -78,8 +72,11 @@ oscillatorInput.addEventListener("input", async el =>
 });
 
 
-playButton.addEventListener("click", async () =>
+async function setupIfNeeded()
 {
+    if (!currentProgression)
+        return;
+
     if (!toneJSStarted)
     {
         await Tone.start();
@@ -91,9 +88,15 @@ playButton.addEventListener("click", async () =>
         const synthClass = SYNTH_INPUT_MAP[synthInput.value];
         await setSynth(synthClass);
     }
+}
+
+
+playButton.addEventListener("click", async () =>
+{
+    await setupIfNeeded();
 
     Tone.Transport.stop();
     Tone.Transport.clear();
 
-    await playProgression([["C4", "D4", "E4"], ["C4", "D4", "E4"], ["C4", "D4", "E4"]])
+    await playProgression(currentProgression);
 });

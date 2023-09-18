@@ -1,0 +1,16 @@
+$color-1: #131313;
+$color-2: #FFFFFF;
+$color-3: #fc6f03;
+$color-4: lighten($color-1, 80%);
+$color-5: darken(saturate($color-3, 90%), 10%);
+$color-6: #1C1C1C;
+
+$font-1: "Inclusive Sans", sans-serif;
+$font-1-w1: 400;
+
+$font-2: "Lato", sans-serif;
+$font-2-w1: 700;
+
+$font-3: "Montserrat", sans-serif;
+$font-3-w1: 200;
+$font-3-w2: 300;

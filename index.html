@@ -9,86 +9,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>RynDTX Chord Progression Generator</title>
 
-    <!--  STYLESHEETS  -->
+    <!--  STYLESHEETS (GOOGLE FONTS)  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Lato:wght@700&family=Montserrat:wght@100;200;300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <!--  STYLESHEETS  -->
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/generator-section.css">
+    <link rel="stylesheet" type="text/css" href="./css/about-section.css">
 
     <!--  SCRIPTS  -->
     <script src="js/ui/nav-links.js" defer></script>
     <script src="js/ui/range-outputs.js" defer></script>
     <script src="js/libraries/Tone.js"></script>
     <script src="./js/audio-handler.js" defer></script>
+    <script src="./js/generator.js" defer></script>
 </head>
 <body>
     <!--  GENERATOR SECTION  -->
     <section id="generator">
-        <header>
-            <div id="header-name">
-                <h1>RynDTX <span>Chord Progression Generator</span></h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#generator" class="active">Generator</a></li>
-                    <li><a href="#about">About</a></li>
-                </ul>
-            </nav>
-        </header>
+        <div id="generator-top">
+            <header>
+                <div id="header-name">
+                    <h1>RynDTX <span>Chord Progression Generator</span></h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#generator" class="active">Generator</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </nav>
+            </header>
 
-        <div id="display">
-<!--                <h2>A B C Dm A B C Dm</h2>-->
-            <h2>A B C Dm</h2>
+            <div id="display">
+                <!--                <h2>A B C Dm A B C Dm</h2>-->
+                <h2 id="display-text"></h2>
+            </div>
+
+            <div id="buttons">
+                <div class="button-row">
+                    <label for="generate-button">Generate</label>
+                    <button id="generate-button">A</button>
+                </div>
+                <div class="button-row">
+                    <label for="play-button">Play</label>
+                    <button id="play-button">B</button>
+                </div>
+            </div>
+
+
         </div>
+        <div>
+            <div id="options">
+                <div class="option">
+                    <label for="num-chords-input">Number of chords:</label>
 
-                <div class="gameboy-button">
-        <div id="buttons">
-            <button id="play-button">Play</button>
-            <button id="generate-button">Generate</button>
-        </div>
+                    <input id="num-chords-input" type="range" min="2" max="8" step="1" value="4">
+                    <output id="num-chords-output">4</output>
+                </div>
 
-        <div id="options">
-            <div class="option">
-                <label for="num-chords-input">Number of chords:</label>
+                <div class="option">
+                    <label for="key-input">Key:</label>
+                    <select id="key-input">
+                        <option value="random">Random</option>
+                    </select>
+                </div>
 
-                <input id="num-chords-input" type="range" min="2" max="8" step="1" value="4">
-                <output id="num-chords-output">4</output>
-            </div>
+                <div class="option">
+                    <label for="major-minor-input">Major/Minor:</label>
+                    <select id="major-minor-input">
+                        <option value="random">Random</option>
+                        <option value="major">Major</option>
+                        <option value="minor">Minor</option>
+                    </select>
+                </div>
 
-            <div class="option">
-                <label for="key-input">Key:</label>
-                <select id="key-input">
-                    <option value="random">Random</option>
-                </select>
-            </div>
+                <div class="option">
+                    <label for="synth-input">Preview Synth:</label>
+                    <select id="synth-input">
+                        <option value="PolySynth">Poly Synth</option>
+                        <option value="FMSynth">FM Synth</option>
+                        <option value="AMSynth">AM Synth</option>
+                        <option value="NoiseSynth">Noise Synth</option>
+                    </select>
+                </div>
 
-            <div class="option">
-                <label for="major-minor-input">Major/Minor:</label>
-                <select id="major-minor-input">
-                    <option value="random">Random</option>
-                    <option value="major">Major</option>
-                    <option value="minor">Minor</option>
-                </select>
-            </div>
-
-            <div class="option">
-                <label for="synth-input">Preview Synth:</label>
-                <select id="synth-input">
-                    <option value="PolySynth">Poly Synth</option>
-                    <option value="FMSynth">FM Synth</option>
-                    <option value="AMSynth">AM Synth</option>
-                    <option value="NoiseSynth">Noise Synth</option>
-                </select>
-            </div>
-
-            <div class="option">
-                <label for="oscillator-input">Preview Synth:</label>
-                <select id="oscillator-input">
-                    <option value="sine">Sine</option>
-                    <option value="square">Square</option>
-                    <option value="sawtooth">Sawtooth</option>
-                    <option value="fatsawtooth">Fat Sawtooth</option>
-                </select>
+                <div class="option">
+                    <label for="oscillator-input">Preview Synth:</label>
+                    <select id="oscillator-input">
+                        <option value="sine">Sine</option>
+                        <option value="square">Square</option>
+                        <option value="sawtooth">Sawtooth</option>
+                        <option value="fatsawtooth">Fat Sawtooth</option>
+                    </select>
+                </div>
             </div>
         </div>
     </section>
