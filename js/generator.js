@@ -1,11 +1,33 @@
 const SCALE = ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"];
 const OCTAVE = 4;
 
-const displayText = document.querySelector("#display-text");
+const display = document.querySelector("#display");
 const generateButton = document.querySelector("#generate-button");
 const numChordsInput = document.querySelector("#num-chords-input");
 const keyInput = document.querySelector("#key-input");
 const majorMinorInput = document.querySelector("#major-minor-input");
+
+
+async function setDisplayText(text)
+{
+    while (display.hasChildNodes())
+        display.removeChild(display.firstChild);
+
+    for (const char of text.split(" "))
+    {
+        if (char === " " || char === "")
+            return;
+
+        const wrapper = document.createElement("div");
+        wrapper.classList.add("display-text-wrapper");
+
+        const h2 = document.createElement("h2");
+        h2.textContent = char;
+        wrapper.appendChild(h2);
+
+        display.appendChild(wrapper);
+    }
+}
 
 
 async function generateProgression(length=4, key="random", majorOrMinor="random")
@@ -27,12 +49,13 @@ async function generateProgression(length=4, key="random", majorOrMinor="random"
     }
 
     currentProgression = progression;
-    displayText.textContent = text;
+    await setDisplayText(text);
 
     await setupIfNeeded();
 
     Tone.Transport.stop();
     Tone.Transport.clear();
+    Tone.Transport.bpm.value = BPM;
 
     await playProgression();
 }

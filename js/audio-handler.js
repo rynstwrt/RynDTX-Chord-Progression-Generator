@@ -1,18 +1,20 @@
-const NOTE_DURATION = "16n";
-const NUM_VOICES = 5;
+const NOTE_DURATION = "8n";
+const NUM_VOICES = 1;
+const BPM = 250;
 const SYNTH_INPUT_MAP = {
     "PolySynth": Tone.Synth,
     "FMSynth": Tone.FMSynth,
     "AMSynth": Tone.AMSynth,
-    "NoiseSynth": Tone.NoiseSynth
 };
 const SYNTH_ENVELOPE = {
-    // attack: .01,
+    attack: .005,
+    decay: .4,
+    sustain: 0,
+    release: .5
     // decay: 0.5,
     // sustain: 0,
-    // release: 1
+    // release: .35
 };
-const DEFAULT_OSCILLATOR = "sine";
 
 const synthInput = document.querySelector("#synth-input");
 const oscillatorInput = document.querySelector("#oscillator-input");
@@ -20,7 +22,7 @@ const playButton = document.querySelector("#play-button");
 
 let toneJSStarted = false;
 let synth;
-let oscillator = DEFAULT_OSCILLATOR;
+let oscillator = oscillatorInput.value;
 let part;
 let currentProgression;
 
@@ -97,6 +99,7 @@ playButton.addEventListener("click", async () =>
 
     Tone.Transport.stop();
     Tone.Transport.clear();
+    // Tone.Transport.bpm.value = BPM;
 
     await playProgression(currentProgression);
 });

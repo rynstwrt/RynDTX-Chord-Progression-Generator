@@ -1,6 +1,12 @@
 section#about {
   padding-top: 30px;
 }
+section#about h3 {
+  margin-bottom: 20px;
+}
+section#about p {
+  margin-bottom: 10px;
+}
 section#about #links {
   margin-top: 10px;
 }
