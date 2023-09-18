@@ -60,6 +60,11 @@ select
     cursor: pointer;
     letter-spacing: 2px;
     font-family: $font-1;
+
+    option
+    {
+        color: black;
+    }
 }
 
 section

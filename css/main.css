@@ -52,6 +52,9 @@ select {
   letter-spacing: 2px;
   font-family: "Inclusive Sans", sans-serif;
 }
+select option {
+  color: black;
+}
 
 section {
   width: 100%;

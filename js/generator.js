@@ -37,6 +37,7 @@ async function generateProgression(length=4, key="random", majorOrMinor="random"
     await playProgression();
 }
 
+
 generateButton.addEventListener("click", async () =>
 {
     const numChords = numChordsInput.value;
@@ -45,3 +46,16 @@ generateButton.addEventListener("click", async () =>
 
     await generateProgression(numChords, key, majorMinor);
 });
+
+
+function generateKeys()
+{
+    for (const key of SCALE)
+    {
+        const option = document.createElement("option");
+        option.value = key;
+        option.textContent = key;
+        keyInput.appendChild(option);
+    }
+}
+generateKeys();
