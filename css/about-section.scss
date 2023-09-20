@@ -3,11 +3,16 @@
 section#about
 {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    //justify-content: flex-end;
 
     p
     {
         margin-bottom: 10px;
         font-weight: $font-3-w2;
+        text-align: right;
     }
 
     #links
@@ -18,6 +23,7 @@ section#about
         {
             list-style: none;
             display: flex;
+            justify-content: flex-end;
             width: 100%;
             margin-bottom: 10px;
 

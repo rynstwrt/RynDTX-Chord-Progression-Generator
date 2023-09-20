@@ -37,6 +37,8 @@ section#settings
                 font-family: $font-3;
                 font-weight: $font-3-w2;
                 color: $color-4;
+                display: inline;
+                max-width: 150px;
             }
 
             input[type="range"]

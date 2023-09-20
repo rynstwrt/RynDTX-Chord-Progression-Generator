@@ -81,14 +81,17 @@ section
 
 header
 {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position: fixed;
     top: 0;
+    right: 0;
+    left: 0;
     background-color: $color-1;
     margin-bottom: 20px;
-    padding: 15px 20px;
+    padding: 15px 20px 5px 20px;
 
     #header-name
     {
@@ -97,17 +100,18 @@ header
 
         h1
         {
-            font-family: $font-2;
-            font-size: 40px;
+            font-family: $font-3;
+            font-size: 35px;
             letter-spacing: 2px;
 
             span
             {
                 display: block;
-                font-family: $font-1;
+                font-family: $font-3;
+                font-weight: $font-3-w2;
                 font-size: 15px;
-                max-width: 150px;
-                letter-spacing: 1px;
+                max-width: 175px;
+                //letter-spacing: 1px;
             }
         }
     }
@@ -125,7 +129,7 @@ header
             {
                 &:not(&:first-of-type)
                 {
-                    margin-top: 8px;
+                    margin-top: 3px;
                 }
 
                 a
@@ -134,7 +138,7 @@ header
                     text-decoration: $color-1 solid underline;
                     text-underline-offset: 2px;
                     text-transform: uppercase;
-                    letter-spacing: 1px;
+                    //letter-spacing: 1px;
                     font-size: 14px;
 
                     &.active

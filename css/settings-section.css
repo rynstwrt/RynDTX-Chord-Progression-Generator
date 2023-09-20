@@ -26,6 +26,8 @@ section#settings #options .option label {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   color: #dfdfdf;
+  display: inline;
+  max-width: 150px;
 }
 section#settings #options .option input[type=range] {
   width: 100%;

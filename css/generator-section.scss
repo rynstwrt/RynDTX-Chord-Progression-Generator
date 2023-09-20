@@ -8,6 +8,7 @@ section#generator
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 125px;
 
     #generator-body
     {
@@ -79,8 +80,8 @@ section#generator
 
         button
         {
-            color: $color-3;
-            border: 1px solid $color-3;
+            color: $color-5;
+            border: 1px solid $color-5;
             border-radius: 50%;
             $size: 45px;
             width: $size;
@@ -94,7 +95,7 @@ section#generator
 
             &:hover
             {
-                background-color: $color-3;
+                background-color: $color-5;
                 color: $color-1;
             }
         }

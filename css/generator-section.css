@@ -4,6 +4,7 @@ section#generator {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 125px;
 }
 section#generator #generator-body {
   border: 1px solid #ec5230;
@@ -60,8 +61,8 @@ section#generator #generator-body {
   margin-right: 10px;
 }
 #buttons .button-row button {
-  color: #fd3519;
-  border: 1px solid #fd3519;
+  color: #ec5230;
+  border: 1px solid #ec5230;
   border-radius: 50%;
   width: 45px;
   height: 45px;
@@ -73,7 +74,7 @@ section#generator #generator-body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
 }
 #buttons .button-row button:hover {
-  background-color: #fd3519;
+  background-color: #ec5230;
   color: #131313;
 }
 #buttons .button-row:last-child {

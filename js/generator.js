@@ -3,8 +3,8 @@ const OCTAVE = 4;
 
 const display = document.querySelector("#display");
 const generateButton = document.querySelector("#generate-button");
-const numChordsInput = document.querySelector("#num-chords-input");
 const keyInput = document.querySelector("#key-input");
+const numChordsInput = document.querySelector("#num-chords-input")
 const majorMinorInput = document.querySelector("#major-minor-input");
 
 
@@ -64,11 +64,7 @@ async function generateProgression(length=4, key="random", majorOrMinor="random"
     currentProgression = progression;
     await setDisplayText(text);
 
-    await setupIfNeeded();
-
-    Tone.Transport.stop();
-    Tone.Transport.clear();
-    Tone.Transport.bpm.value = BPM;
+    resetTransport();
 
     await playProgression();
 }
@@ -84,14 +80,14 @@ generateButton.addEventListener("click", async () =>
 });
 
 
-function generateKeys()
-{
-    for (const key of SCALE)
-    {
-        const option = document.createElement("option");
-        option.value = key;
-        option.textContent = key;
-        keyInput.appendChild(option);
-    }
-}
-generateKeys();
+// function generateKeys()
+// {
+//     for (const key of SCALE)
+//     {
+//         const option = document.createElement("option");
+//         option.value = key;
+//         option.textContent = key;
+//         keyInput.appendChild(option);
+//     }
+// }
+// generateKeys();
