@@ -1,6 +1,7 @@
 volumeInput.addEventListener("input", () =>
 {
-    synth.set({"volume": volumeInput.value});
+    if (synth)
+        synth.set({"volume": volumeInput.value});
 });
 
 
@@ -9,13 +10,13 @@ synthInput.addEventListener("input", async () =>
     if (synth && synth.name === synthInput.value)
         return;
 
-    await setSynth(SYNTH_INPUT_MAP[synthInput.value]);
+    await setSynth();
 });
 
 
 oscillatorInput.addEventListener("input", async () =>
 {
-    await setSynth(SYNTH_INPUT_MAP[synth.name]);
+    await setSynth();
 });
 
 

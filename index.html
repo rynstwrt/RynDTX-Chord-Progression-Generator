@@ -85,86 +85,99 @@
     </section>
 
 
+    <div class="separator"></div>
+
+
     <section id="settings">
         <h3>Settings</h3>
 
         <div id="options">
-            <div class="option">
-                <label for="num-chords-input">Number of chords:</label>
+            <div class="option-group">
+                <h4>Chord Progression Options</h4>
 
-                <input id="num-chords-input" type="range" min="2" max="8" step="1" value="4">
-                <output id="num-chords-output">4</output>
+                <div class="option">
+                    <label for="num-chords-input">Number of chords:</label>
+
+                    <input id="num-chords-input" type="range" min="2" max="8" step="1" value="4">
+                    <output id="num-chords-output">4</output>
+                </div>
+
+                <div class="option">
+                    <label for="key-input">Key:</label>
+                    <select id="key-input">
+                        <option value="random" selected="">Random</option>
+                        <option value="A">A</option>
+                        <option value="A#">A#</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="C#">C#</option>
+                        <option value="D">D</option>
+                        <option value="D#">D#</option>
+                        <option value="E">E</option>
+                        <option value="F">F</option>
+                        <option value="F#">F#</option>
+                        <option value="G">G</option>
+                        <option value="G#">G#</option>
+                    </select>
+                </div>
+
+                <div class="option">
+                    <label for="major-minor-input">Major/Minor:</label>
+                    <select id="major-minor-input">
+                        <option value="random" selected>Random</option>
+                        <option value="major">Major</option>
+                        <option value="minor">Minor</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="option">
-                <label for="volume-input">Volume:</label>
-                <input id="volume-input" type="range" min="0" max="7" step="0.5" value="4">
-            </div>
+            <div class="option-group">
+                <h4>Playback Options</h4>
 
-            <div class="option">
-                <label for="key-input">Key:</label>
-                <select id="key-input">
-                    <option value="random" selected="">Random</option>
-                    <option value="A">A</option>
-                    <option value="A#">A#</option>
-                    <option value="B">B</option>
-                    <option value="C">C</option>
-                    <option value="C#">C#</option>
-                    <option value="D">D</option>
-                    <option value="D#">D#</option>
-                    <option value="E">E</option>
-                    <option value="F">F</option>
-                    <option value="F#">F#</option>
-                    <option value="G">G</option>
-                    <option value="G#">G#</option>
-                </select>
-            </div>
+                <div class="option">
+                    <label for="volume-input">Volume:</label>
+                    <input id="volume-input" type="range" min="-20" max="10" step="0.5" value="-5">
+                </div>
 
-            <div class="option">
-                <label for="major-minor-input">Major/Minor:</label>
-                <select id="major-minor-input">
-                    <option value="random" selected>Random</option>
-                    <option value="major">Major</option>
-                    <option value="minor">Minor</option>
-                </select>
-            </div>
+                <div class="option">
+                    <label for="note-duration-input">Note Duration:</label>
+                    <select id="note-duration-input">
+                        <option value="4n">Quarter Note</option>
+                        <option value="8n" selected>8th Note</option>
+                        <option value="16n">16th Note</option>
+                    </select>
+                </div>
 
-            <div class="option">
-                <label for="note-duration-input">Note Duration:</label>
-                <select id="note-duration-input">
-                    <option value="4n">Quarter Note</option>
-                    <option value="8n" selected>8th Note</option>
-                    <option value="16n">16th Note</option>
-                </select>
-            </div>
+                <div class="option">
+                    <label for="speed-input">Speed:</label>
+                    <input id="speed-input" type="range" min="50" max="450" step="1" value="200">
+                </div>
 
-            <div class="option">
-                <label for="speed-input">Speed:</label>
-                <input id="speed-input" type="range" min="50" max="450" step="1" value="250">
-            </div>
+                <div class="option">
+                    <label for="synth-input">Synth:</label>
+                    <select id="synth-input">
+                        <option value="PolySynth">Poly Synth</option>
+                        <option value="FMSynth" selected>FM Synth</option>
+                        <option value="AMSynth">AM Synth</option>
+                        <option value="MetalSynth">Metal Synth</option>
+                    </select>
+                </div>
 
-            <div class="option">
-                <label for="synth-input">Synth:</label>
-                <select id="synth-input">
-                    <option value="PolySynth">Poly Synth</option>
-                    <option value="FMSynth">FM Synth</option>
-                    <option value="AMSynth" selected>AM Synth</option>
-                    <option value="MetalSynth">Metal Synth</option>
-                </select>
-            </div>
-
-            <div class="option">
-                <label for="oscillator-input">Oscillator:</label>
-                <select id="oscillator-input">
-                    <option value="sine">Sine</option>
-                    <option value="square"selected >Square</option>
-                    <option value="sawtooth">Sawtooth</option>
-                    <option value="fatsawtooth">Fat Sawtooth</option>
-                </select>
+                <div class="option">
+                    <label for="oscillator-input">Oscillator:</label>
+                    <select id="oscillator-input">
+                        <option value="sine">Sine</option>
+                        <option value="square">Square</option>
+                        <option value="sawtooth" selected>Sawtooth</option>
+                        <option value="fatsawtooth">Fat Sawtooth</option>
+                    </select>
+                </div>
             </div>
         </div>
     </section>
 
+
+    <div class="separator"></div>
 
     <!--  ABOUT SECTION  -->
     <section id="about">

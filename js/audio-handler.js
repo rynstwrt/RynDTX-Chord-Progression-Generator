@@ -11,7 +11,7 @@ const SYNTH_ENVELOPE = {
     // sustain: 0,
     // release: .5
     attack: .005,
-    release: .3
+    // release: .3
 };
 
 const playButton = document.querySelector("#play-button");
@@ -30,6 +30,13 @@ let currentProgression;
 
 async function playProgression()
 {
+    if (!(await Tone.loaded()))
+    {
+        await Tone.start();
+        Tone.Transport.bpm.value = speedInput.value;
+        await setSynth();
+    }
+
     if (part)
         part.clear();
 
@@ -43,12 +50,12 @@ async function playProgression()
 }
 
 
-async function setSynth(synthClass)
+async function setSynth()
 {
     if (synth)
         synth.dispose();
 
-    synth = new Tone.PolySynth(synthClass, NUM_VOICES).toDestination();
+    synth = new Tone.PolySynth(SYNTH_INPUT_MAP[synthInput.value], NUM_VOICES).toDestination();
 
     synth.set({
         oscillator: {
@@ -80,7 +87,7 @@ function resetTransport()
 
 (async function()
 {
-    await Tone.start();
-    await setSynth(SYNTH_INPUT_MAP[synthInput.value]);
+    // await Tone.start();
+    // await setSynth(SYNTH_INPUT_MAP[synthInput.value]);
     // Tone.Transport.bpm.value = speedInput.value;
 })();

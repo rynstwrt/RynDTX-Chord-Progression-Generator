@@ -1,11 +1,27 @@
 section#settings h3 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
   width: 100%;
 }
 section#settings #options {
   max-width: 600px;
 }
-section#settings #options .option {
+section#settings #options .option-group:first-of-type {
+  margin-top: 20px;
+}
+section#settings #options .option-group:not(section#settings #options .option-group:first-of-type) h4 {
+  margin-top: 40px;
+}
+section#settings #options .option-group h4 {
+  font-family: "Inclusive Sans", sans-serif;
+  font-weight: 200;
+  text-transform: uppercase;
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #d0d0d0;
+  letter-spacing: 1px;
+}
+section#settings #options .option-group .option {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -16,10 +32,10 @@ section#settings #options .option {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-section#settings #options .option:not(section#settings #options .option:last-of-type) {
+section#settings #options .option-group .option:not(section#settings #options .option-group .option:last-of-type) {
   margin-bottom: 15px;
 }
-section#settings #options .option label {
+section#settings #options .option-group .option label {
   font-size: 15px;
   letter-spacing: 1px;
   margin-right: 10px;
@@ -29,10 +45,10 @@ section#settings #options .option label {
   display: inline;
   max-width: 150px;
 }
-section#settings #options .option input[type=range] {
+section#settings #options .option-group .option input[type=range] {
   width: 100%;
 }
-section#settings #options .option output {
+section#settings #options .option-group .option output {
   font-size: 21px;
   letter-spacing: 1px;
   margin-right: 10px;

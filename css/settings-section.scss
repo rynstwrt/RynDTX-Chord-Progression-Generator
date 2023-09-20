@@ -4,7 +4,8 @@ section#settings
 {
     h3
     {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
         width: 100%;
     }
 
@@ -12,48 +13,75 @@ section#settings
     {
         max-width: 600px;
 
-        .option
+        .option-group
         {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: $color-6;
-            color: black;
-            padding: 17px 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
-
-            &:not(&:last-of-type)
+            &:first-of-type
             {
-                margin-bottom: 15px;
+                margin-top: 20px;
             }
 
-            label
+            &:not(&:first-of-type)
             {
+                h4
+                {
+                    margin-top: 40px;
+                }
+            }
+
+            h4
+            {
+                font-family: $font-1;
+                font-weight: 200;
+                text-transform: uppercase;
                 font-size: 15px;
+                margin-bottom: 10px;
+                color: $color-2;
                 letter-spacing: 1px;
-                margin-right: 10px;
-                font-family: $font-3;
-                font-weight: $font-3-w2;
-                color: $color-4;
-                display: inline;
-                max-width: 150px;
             }
 
-            input[type="range"]
+            .option
             {
                 width: 100%;
-            }
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: $color-6;
+                color: black;
+                padding: 17px 20px;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
 
-            output
-            {
-                font-size: 21px;
-                letter-spacing: 1px;
-                margin-right: 10px;
-                font-family: $font-3;
-                color: $color-4;
-                margin-left: 10px;
+                &:not(&:last-of-type)
+                {
+                    margin-bottom: 15px;
+                }
+
+                label
+                {
+                    font-size: 15px;
+                    letter-spacing: 1px;
+                    margin-right: 10px;
+                    font-family: $font-3;
+                    font-weight: $font-3-w2;
+                    color: $color-4;
+                    display: inline;
+                    max-width: 150px;
+                }
+
+                input[type="range"]
+                {
+                    width: 100%;
+                }
+
+                output
+                {
+                    font-size: 21px;
+                    letter-spacing: 1px;
+                    margin-right: 10px;
+                    font-family: $font-3;
+                    color: $color-4;
+                    margin-left: 10px;
+                }
             }
         }
     }
