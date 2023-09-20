@@ -1,5 +1,9 @@
 section#settings h3 {
   margin-bottom: 20px;
+  width: 100%;
+}
+section#settings #options {
+  max-width: 600px;
 }
 section#settings #options .option {
   width: 100%;
@@ -24,7 +28,7 @@ section#settings #options .option label {
   color: #dfdfdf;
 }
 section#settings #options .option input[type=range] {
-  max-width: 130px;
+  width: 100%;
 }
 section#settings #options .option output {
   font-size: 21px;

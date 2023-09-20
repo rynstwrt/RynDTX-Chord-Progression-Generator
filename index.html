@@ -36,6 +36,7 @@
         <nav>
             <ul>
                 <li><a href="#generator" class="active">Generator</a></li>
+                <li><a href="#settings">Settings</a></li>
                 <li><a href="#about">About</a></li>
             </ul>
         </nav>
@@ -43,27 +44,28 @@
 
     <!--  GENERATOR SECTION  -->
     <section id="generator">
-        <div id="display">
-            <!--                <h2>A B C Dm A B C Dm</h2>-->
-            <!--                <h2 id="display-text"></h2>-->
-        </div>
-
-        <div id="buttons">
-            <div class="button-row">
-                <label for="generate-button">Generate</label>
-                <button id="generate-button">A</button>
+        <div id="generator-body">
+            <div id="display-container">
+                <div id="display">
+                </div>
             </div>
-            <div class="button-row">
-                <label for="play-button">Play</label>
-                <button id="play-button">B</button>
+
+            <div id="buttons">
+                <div class="button-row">
+                    <label for="generate-button">Generate</label>
+                    <button id="generate-button">A</button>
+                </div>
+                <div class="button-row">
+                    <label for="play-button">Play</label>
+                    <button id="play-button">B</button>
+                </div>
+            </div>
+
+            <div id="start-select-buttons">
+                <div class="start-select-button"></div>
+                <div class="start-select-button"></div>
             </div>
         </div>
-
-        <div id="start-select-buttons">
-            <div class="start-select-button"></div>
-            <div class="start-select-button"></div>
-        </div>
-
     </section>
 
 
@@ -144,6 +146,9 @@
             </ul>
             <ul>
             </ul>
+        </div>
+        <div id="logo-image-container">
+            <img id="logo-image" src="./assets/logo.png" alt="RynDTX Logo">
         </div>
     </section>
 </body>

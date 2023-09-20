@@ -3,41 +3,50 @@ section#generator {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+section#generator #generator-body {
+  border: 1px solid #ec5230;
+  border-radius: 20px;
+  padding: 60px 30px;
+  width: 360px;
 }
 
-#display {
+#display-container {
   width: 100%;
-  height: 200px;
+  height: 250px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  border: 1px solid #fc6f03;
+  border: 1px solid #ec5230;
   border-radius: 3px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
-  padding: 10px;
 }
-#display .display-text-wrapper {
-  border: 1px solid #cc5800;
-  margin: 0 10px;
-  min-width: 55px;
-  width: 55px;
-  height: 55px;
+#display-container #display {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#display-container #display .display-text-wrapper {
+  border: 1px solid #fd3519;
+  margin: 10px;
+  width: 45px;
+  height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#display .display-text-wrapper h2 {
+#display-container #display .display-text-wrapper h2 {
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
-  font-size: 25px;
+  font-size: 17px;
   color: #dfdfdf;
 }
 
 #buttons {
-  margin-top: 100px;
-  margin-bottom: 75px;
+  margin-top: 50px;
 }
 #buttons .button-row {
   width: 100%;
@@ -51,8 +60,8 @@ section#generator {
   margin-right: 10px;
 }
 #buttons .button-row button {
-  color: #fc6f03;
-  border: 1px solid #fc6f03;
+  color: #fd3519;
+  border: 1px solid #fd3519;
   border-radius: 50%;
   width: 45px;
   height: 45px;
@@ -64,29 +73,25 @@ section#generator {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
 }
 #buttons .button-row button:hover {
-  background-color: #fc6f03;
+  background-color: #fd3519;
   color: #131313;
 }
-#buttons .button-row:first-child {
-  padding-right: 10px;
-}
 #buttons .button-row:last-child {
-  padding-right: 100px;
+  padding-right: 80px;
 }
 
 #start-select-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 130px;
 }
 #start-select-buttons .start-select-button {
   width: 65px;
   height: 13px;
-  border: 1px solid #fc6f03;
+  border: 1px solid #ec5230;
   border-radius: 20px;
-  margin: 0px 15px;
+  margin: 0 15px;
 }
 
 /*# sourceMappingURL=generator-section.css.map */

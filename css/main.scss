@@ -33,9 +33,11 @@ h3
     color: $color-4;
     font-size: 30px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-decoration: $color-3 solid underline;
-    text-underline-offset: 2px;
+    text-underline-offset: 7px;
+    margin-bottom: 20px;
+    margin-top: 30px;
 }
 
 p
@@ -69,8 +71,12 @@ select
 section
 {
     width: 100%;
-    //height: 100%;
     padding: 15px 20px;
+
+    &:not(&:last-of-type)
+    {
+        margin-bottom: 100px;
+    }
 }
 
 header
@@ -101,7 +107,7 @@ header
                 font-family: $font-1;
                 font-size: 15px;
                 max-width: 150px;
-                letter-spacing: 0;
+                letter-spacing: 1px;
             }
         }
     }
@@ -120,7 +126,6 @@ header
                 &:not(&:first-of-type)
                 {
                     margin-top: 8px;
-                    //margin-left: 8px;
                 }
 
                 a
@@ -134,10 +139,16 @@ header
 
                     &.active
                     {
-                        text-decoration: $color-3 solid underline;
+                        text-decoration: $color-5 solid underline;
                     }
                 }
             }
         }
     }
+}
+
+.flex-break
+{
+    flex-basis: 100%;
+    height: 0;
 }

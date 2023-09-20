@@ -13,6 +13,8 @@ async function setDisplayText(text)
     while (display.hasChildNodes())
         display.removeChild(display.firstChild);
 
+    let hasBrokeLine = false;
+    let i = 0;
     for (const char of text.split(" "))
     {
         if (char === " " || char === "")
@@ -25,7 +27,18 @@ async function setDisplayText(text)
         h2.textContent = char;
         wrapper.appendChild(h2);
 
+        if (!hasBrokeLine && i >= 4)
+        {
+            hasBrokeLine = true;
+
+            const lineBreak = document.createElement("div");
+            lineBreak.classList.add("flex-break");
+
+            display.appendChild(lineBreak);
+        }
+
         display.appendChild(wrapper);
+        ++i;
     }
 }
 

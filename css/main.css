@@ -26,9 +26,11 @@ h3 {
   color: #dfdfdf;
   font-size: 30px;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  text-decoration: #fc6f03 solid underline;
-  text-underline-offset: 2px;
+  letter-spacing: 1px;
+  text-decoration: #fd3519 solid underline;
+  text-underline-offset: 7px;
+  margin-bottom: 20px;
+  margin-top: 30px;
 }
 
 p {
@@ -44,8 +46,8 @@ select {
   font-size: 15px;
   padding: 10px 10px;
   background-color: transparent;
-  color: #cc5800;
-  border: 1px solid #cc5800;
+  color: #ec5230;
+  border: 1px solid #ec5230;
   border-radius: 0.25rem;
   cursor: pointer;
   letter-spacing: 2px;
@@ -58,6 +60,9 @@ select option {
 section {
   width: 100%;
   padding: 15px 20px;
+}
+section:not(section:last-of-type) {
+  margin-bottom: 100px;
 }
 
 header {
@@ -84,7 +89,7 @@ header #header-name h1 span {
   font-family: "Inclusive Sans", sans-serif;
   font-size: 15px;
   max-width: 150px;
-  letter-spacing: 0;
+  letter-spacing: 1px;
 }
 header nav ul {
   display: flex;
@@ -104,7 +109,12 @@ header nav ul li a {
   font-size: 14px;
 }
 header nav ul li a.active {
-  text-decoration: #fc6f03 solid underline;
+  text-decoration: #ec5230 solid underline;
+}
+
+.flex-break {
+  flex-basis: 100%;
+  height: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
