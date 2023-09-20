@@ -5,75 +5,8 @@ section#generator
     font-family: $font-3;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-header
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    top: 0;
-    background-color: $color-1;
-    margin-bottom: 20px;
-
-    #header-name
-    {
-        display: flex;
-        flex-direction: column;
-
-        h1
-        {
-            font-family: $font-2;
-            font-size: 40px;
-            letter-spacing: 2px;
-
-            span
-            {
-                display: block;
-                font-family: $font-1;
-                font-size: 15px;
-                max-width: 150px;
-                letter-spacing: 0;
-            }
-        }
-    }
-
-    nav
-    {
-        ul
-        {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            list-style: none;
-
-            li
-            {
-                &:not(&:first-of-type)
-                {
-                    margin-top: 8px;
-                    //margin-left: 8px;
-                }
-
-                a
-                {
-                    transition: text-decoration-color .2s ease-in-out;
-                    text-decoration: $color-1 solid underline;
-                    text-underline-offset: 2px;
-                    text-transform: uppercase;
-                    letter-spacing: 1px;
-                    font-size: 14px;
-
-                    &.active
-                    {
-                        text-decoration: $color-3 solid underline;
-                    }
-                }
-            }
-        }
-    }
+    justify-content: center;
+    //max-width: 400px;
 }
 
 #display
@@ -88,6 +21,7 @@ header
     border-radius: 3px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .25);
     padding: 10px;
+    //margin-top: 50px;
 
     .display-text-wrapper
     {
@@ -160,23 +94,27 @@ header
 
         &:last-child
         {
-            padding-right: 80px;
+            padding-right: 100px;
         }
     }
 }
 
-#generator-bottom
+#start-select-buttons
 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    //padding-bottom: 100px;
 
     .start-select-button
     {
         width: 65px;
-        height: 14px;
-        background-color: $color-3;
+        height: 13px;
+        border: 1px solid $color-3;
+        //background-color: $color-3;
         border-radius: 20px;
-        margin: 20px 10px;
+        margin: 0px 15px;
     }
 }
